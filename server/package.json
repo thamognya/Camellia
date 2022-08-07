@@ -5,6 +5,7 @@
     "scripts": {
         "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,html,css}'",
         "watch": "tsc -w",
+        "dev": "nodemon ./dist/index.js",
         "start": "node ./dist/index.js",
         "start2": "ts-node ./src/index.ts"
     },
