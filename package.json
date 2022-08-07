@@ -1,0 +1,25 @@
+{
+    "name": "reddit-fullstack-clone",
+    "version": "0.0.1",
+    "scripts": {
+        "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,html,css}'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thamognya/reddit-fullstack-clone.git"
+    },
+    "keywords": [
+        "reddit clone",
+        "full stack",
+        "graphql"
+    ],
+    "author": "Thamognya Kodi",
+    "license": "AGPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/thamognya/reddit-fullstack-clone/issues"
+    },
+    "homepage": "https://github.com/thamognya/reddit-fullstack-clone#readme",
+    "devDependencies": {
+        "prettier": "^2.7.1"
+    }
+}
