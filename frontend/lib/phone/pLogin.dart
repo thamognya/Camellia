@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class pLoginPage extends StatefulWidget {
@@ -11,20 +13,19 @@ class _pLoginPageState extends State<pLoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[300],
+      backgroundColor: Colors.grey[200],
       body: SafeArea(
         child: Center(
-          child: Column(children: [
-            const SizedBox(height: 10),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             // Hello Again
             const Text(
-              'Hello Again',
+              'Hello Again!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             // Missed You
             const Text(
               'Welcome Back, you\'ve been missed!',
@@ -32,13 +33,13 @@ class _pLoginPageState extends State<pLoginPage> {
                 fontSize: 20,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 50),
             // Email
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Colors.grey[100],
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(10)),
                 child: const TextField(
@@ -51,17 +52,18 @@ class _pLoginPageState extends State<pLoginPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             // Password
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Colors.grey[100],
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(10)),
                 child: const TextField(
                   //textAlign: TextAlign.center,
+                  obscureText: true,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.all(20.0),
@@ -69,6 +71,48 @@ class _pLoginPageState extends State<pLoginPage> {
                   ),
                 ),
               ),
+            ),
+            const SizedBox(height: 15),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 50.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    log("hello");
+                  },
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.blue[100],
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 25.0,
+                        vertical: 20.0,
+                      )),
+                  child: const Text(
+                    'Sign In',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  )),
+            ),
+
+            const SizedBox(height: 30),
+            // not a member sign up
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+              Text(
+                'Not a member? Don\'t worry ',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Register Now',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ]
             )
           ]),
         ),
