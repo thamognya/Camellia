@@ -1,6 +1,6 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class pLoginPage extends StatefulWidget {
   const pLoginPage({Key? key}) : super(key: key);
@@ -18,11 +18,13 @@ class _pLoginPageState extends State<pLoginPage> {
         child: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             // Hello Again
-            const Text(
+            Text(
               'Hello Again!',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
+              style: GoogleFonts.roboto(
+                textStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                ),
               ),
             ),
             const SizedBox(height: 10),
@@ -81,7 +83,7 @@ class _pLoginPageState extends State<pLoginPage> {
                     log("hello");
                   },
                   style: ElevatedButton.styleFrom(
-                      primary: Colors.blue[100],
+                      primary: Colors.blue[300],
                       padding: const EdgeInsets.symmetric(
                         horizontal: 25.0,
                         vertical: 20.0,

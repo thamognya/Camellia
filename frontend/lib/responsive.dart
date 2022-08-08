@@ -13,14 +13,13 @@ class responsiveLayout extends StatelessWidget {
   final Widget portraitTabletBody;
   final Widget tabletBody;
   final Widget desktopBody;
-  final Widget bigDesktopBody;
 
-  responsiveLayout(
-      {required this.phoneBody,
-      required this.portraitTabletBody,
-      required this.tabletBody,
-      required this.desktopBody,
-      required this.bigDesktopBody});
+  responsiveLayout({
+    required this.phoneBody,
+    required this.portraitTabletBody,
+    required this.tabletBody,
+    required this.desktopBody,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +33,9 @@ class responsiveLayout extends StatelessWidget {
       } else if (constraints.maxWidth <= 961) {
         // tablet
         return tabletBody;
-      } else if (constraints.maxWidth <= 1025) {
+      } else {
         // desktop
         return desktopBody;
-      } else {
-        // big
-        return bigDesktopBody;
       }
     });
   }

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/phone/pLogin.dart';
-import 'package:frontend/potraitTablet/ptLogin.dart';
-import 'package:frontend/responsive.dart';
-import 'package:frontend/tablet/tLogin.dart';
-import 'package:frontend/bigDesktop/bdLogin.dart';
-import 'package:frontend/desktop/dLogin.dart';
+import './phone/pLogin.dart';
+import './potraitTablet/ptLogin.dart';
+import './responsive.dart';
+import './tablet/tLogin.dart';
+import './desktop/dLogin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
             phoneBody: pLoginPage(),
             portraitTabletBody: ptLoginPage(),
             tabletBody: tLoginPage(),
-            desktopBody: dLoginPage(),
-            bigDesktopBody: bdLoginPage()));
+            desktopBody: dLoginPage()));
   }
 }
